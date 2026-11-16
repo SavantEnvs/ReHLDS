@@ -1,0 +1,9 @@
+project: savantenvs/ReHLDS
+target: fuzz_infostring
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_infostring/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_infostring
+    libfuzzer: true
+    timeout: 30
